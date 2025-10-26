@@ -1,0 +1,44 @@
+/* Masonry layout */
+.masonry-gallery {
+  column-count: 3; /* number of columns (auto adjusts below) */
+  column-gap: 1.5rem;
+  padding: 20px;
+}
+
+@media (max-width: 992px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* Masonry items */
+.masonry-gallery .portfolio-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  break-inside: avoid; /* prevents cutting images between columns */
+}
+
+/* Image styling */
+.portfolio-content img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: info overlay */
+.portfolio-info {
+  text-align: center;
+  margin-top: 0.5rem;
+}
